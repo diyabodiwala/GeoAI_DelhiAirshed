@@ -41,23 +41,10 @@ Visualized the confusion matrix and qualitative predictions.
 
 Saved 5 correct and 5 incorrect classification examples.
 
-Repository Structure
-GeoAI_DelhiAirshed/
-├── selection_task.ipynb        )
-|
-│   ├── delhi_ncr.shp
-│   ├── delhi_airshed.geojson
-│   ├── land_cover.tif
-│   └── SentinelTiles/          # Sentinel-2 tiles (tif)
-├── results/
-│   ├── delhi_airshed_map.png
-│   ├── confusion_matrix.png
-│   ├── val_predictions.csv
-│   ├── example_*.png
-│   ├── incorrect_*.png
-│   └── train_mis_*.png
-└── models/
-    └── resnet18_best.pth
+### Model Weights
+The trained model file (`resnet18_best.pth`, ~45 MB) exceeds GitHub’s 25 MB limit.  
+You can download it from Google Drive here: [Model File (resnet18_best.pth)]([https://drive.google.com/your-shareable-link](https://drive.google.com/file/d/1N9zb6o2wwAEk_1OGRkMCGA3mTCICln_O/view?usp=drive_link))
+
 
 How to Run
 # 1. Clone the repository
