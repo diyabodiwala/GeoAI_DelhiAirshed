@@ -43,7 +43,7 @@ Saved 5 correct and 5 incorrect classification examples.
 
 ### Model Weights
 The trained model file (`resnet18_best.pth`, ~45 MB) exceeds GitHub’s 25 MB limit.  
-You can download it from Google Drive here: [Model File (resnet18_best.pth)]([https://drive.google.com/your-shareable-link](https://drive.google.com/file/d/1N9zb6o2wwAEk_1OGRkMCGA3mTCICln_O/view?usp=drive_link))
+You can download it from Google Drive here: (https://drive.google.com/file/d/1N9zb6o2wwAEk_1OGRkMCGA3mTCICln_O/view?usp=drive_link)
 
 
 How to Run
