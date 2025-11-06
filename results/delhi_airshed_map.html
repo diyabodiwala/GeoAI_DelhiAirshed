@@ -1,0 +1,2502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Map</title>
+</head>
+<body>
+
+
+<!-- Load require.js. Delete this if your page already loads require.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js" crossorigin="anonymous"></script>
+
+<script type="application/vnd.jupyter.widget-state+json">
+{
+  "version_major": 2,
+  "version_minor": 0,
+  "state": {
+    "6eada1caa516475a8d061c2c50271862": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {
+        "width": "500px"
+      }
+    },
+    "77aee4a5ec634e228f9c96c76ed1c307": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "104c6676b5e045efaf325386972691c2": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "icon": "point_scan",
+        "layout": "IPY_MODEL_77aee4a5ec634e228f9c96c76ed1c307",
+        "tooltip_text": "Inspector"
+      }
+    },
+    "c8df6e15417d458d84e154dc02cbb4a7": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "bbdc2dd8eba045929d4a9767e7e45b25": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "icon": "bar_chart",
+        "layout": "IPY_MODEL_c8df6e15417d458d84e154dc02cbb4a7",
+        "tooltip_text": "Plotting"
+      }
+    },
+    "ac9ae994f6d74e2c83840132d54592ae": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "5208ecaac0a2411c8b0cf31f1aad3269": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "icon": "history",
+        "layout": "IPY_MODEL_ac9ae994f6d74e2c83840132d54592ae",
+        "tooltip_text": "Create timelapse"
+      }
+    },
+    "ee31ec955af84b27b1a68d96c4f70d56": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "1ab43bf663ee4490aa655c1393003f7e": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "icon": "map",
+        "layout": "IPY_MODEL_ee31ec955af84b27b1a68d96c4f70d56",
+        "tooltip_text": "Change basemap"
+      }
+    },
+    "bf0840e69a33455ead42c3ac1ea8e2d3": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "0d308c2b5c7747d3bb247bf83e8fe82a": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "icon": "code",
+        "layout": "IPY_MODEL_bf0840e69a33455ead42c3ac1ea8e2d3",
+        "tooltip_text": "Convert Earth Engine JavaScript to Python"
+      }
+    },
+    "14f6a51340f74dfba472d65ac0780f8f": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "6aa8465176fc4f83a34801f086933853": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "icon": "ink_eraser",
+        "layout": "IPY_MODEL_14f6a51340f74dfba472d65ac0780f8f",
+        "tooltip_text": "Remove all drawn features"
+      }
+    },
+    "a91ef6fd9196438e9662a5c68f29d975": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "8f28ae06a93a42278a1b9e20be9bc4b5": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "icon": "upload",
+        "layout": "IPY_MODEL_a91ef6fd9196438e9662a5c68f29d975",
+        "tooltip_text": "Open local vector/raster data"
+      }
+    },
+    "184357b38ac04de7966ae30bd715ebd3": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "e175fe6e07a64b37a654b9d232392beb": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "icon": "manufacturing",
+        "layout": "IPY_MODEL_184357b38ac04de7966ae30bd715ebd3",
+        "tooltip_text": "WhiteboxTools for local geoprocessing"
+      }
+    },
+    "eadf59212f054f28ac0b4449e9e27202": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "f01cacd920064476a5cbf4189921657b": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "icon": "dns",
+        "layout": "IPY_MODEL_eadf59212f054f28ac0b4449e9e27202",
+        "tooltip_text": "GEE Toolbox for cloud computing"
+      }
+    },
+    "95ceb98bc9b347e489650cf3c6d7897a": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "f51f59750b9e43d4a2d441500e569f07": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "icon": "fast_forward",
+        "layout": "IPY_MODEL_95ceb98bc9b347e489650cf3c6d7897a",
+        "tooltip_text": "Activate timeslider"
+      }
+    },
+    "2b5be2d97f93431283d1254b4cc406b0": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "375fb79d86c645dd83dfe72d11ea2a36": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "icon": "pan_tool_alt",
+        "layout": "IPY_MODEL_2b5be2d97f93431283d1254b4cc406b0",
+        "tooltip_text": "Collect training samples"
+      }
+    },
+    "26462d682e854b67b66af95e98d1e9f1": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "6a9d2a2e3fc34de3ad9839d06dba7c38": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "icon": "show_chart",
+        "layout": "IPY_MODEL_26462d682e854b67b66af95e98d1e9f1",
+        "tooltip_text": "Creating and plotting transects"
+      }
+    },
+    "30678cd73fc546a2b96ede05d871a6f4": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "d82c8f3289dd48fe824d44a27ed4f01e": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "icon": "shuffle",
+        "layout": "IPY_MODEL_30678cd73fc546a2b96ede05d871a6f4",
+        "tooltip_text": "Sankey plots"
+      }
+    },
+    "3d2df9a92f304664839307f550eef81b": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "67a1b2e4c21c4e9eb8ba226f729c9824": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "icon": "image",
+        "layout": "IPY_MODEL_3d2df9a92f304664839307f550eef81b",
+        "tooltip_text": "Planet imagery"
+      }
+    },
+    "d24bbb8e2808448381a7cec237b489af": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "fb09e88ebb664ce589db1dd560ec4513": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "icon": "target",
+        "layout": "IPY_MODEL_d24bbb8e2808448381a7cec237b489af",
+        "tooltip_text": "Get COG/STAC pixel value"
+      }
+    },
+    "cf7cc36c822049ca8aa3d93b78bc35a0": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "a5c07e16f66a4586a28f743f426aa58f": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "icon": "question_mark",
+        "layout": "IPY_MODEL_cf7cc36c822049ca8aa3d93b78bc35a0",
+        "tooltip_text": "Get help"
+      }
+    },
+    "8b14d586160c4f789345ffa679877a3b": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {
+        "height": "880px",
+        "width": "100%"
+      }
+    },
+    "56a09cf9f6f14cfe88a29972cd3ccc80": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {}
+    },
+    "6d6cd1fa08214dac9d28666e3ffae48b": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "cursor": "move"
+      }
+    },
+    "4b4fa59ec71d4f24995a4067f08cf60e": {
+      "model_name": "LeafletTileLayerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+        "base": true,
+        "max_zoom": 30,
+        "min_zoom": 1,
+        "name": "OpenStreetMap.Mapnik",
+        "options": [
+          "attribution",
+          "bounds",
+          "detect_retina",
+          "max_native_zoom",
+          "max_zoom",
+          "min_native_zoom",
+          "min_zoom",
+          "no_wrap",
+          "pm_ignore",
+          "tile_size",
+          "tms",
+          "zoom_offset"
+        ],
+        "subitems": []
+      }
+    },
+    "7a1b8c0b275c4c4bbb6096a6331a60e0": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {}
+    },
+    "1af9701a68614d8cbcefd6b2db959ad6": {
+      "model_name": "LeafletMapModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "_dom_classes": [],
+        "center": [
+          28.599688093223328,
+          77.25000000000024
+        ],
+        "controls": [
+          "IPY_MODEL_3a06681fbc224210aae41bf79e362c67",
+          "IPY_MODEL_8cdfd2eb9011446fbe4023a721afea1b",
+          "IPY_MODEL_261e3b55d01541758f2f6e736acbda92",
+          "IPY_MODEL_b6313128325947d8a28a7c96c431af6c",
+          "IPY_MODEL_a67dbc05a2814547971ff95f4e92f12b",
+          "IPY_MODEL_772dfd854d7d40bd9b326e9b44a720ca",
+          "IPY_MODEL_1a888e7409b34c1690718228ddecb8f2",
+          "IPY_MODEL_92dfcdddae9d48758c32ec6404bebd26",
+          "IPY_MODEL_cd354902cfef4d0689ce5252f470fd0d",
+          "IPY_MODEL_90ef2ddae8e34be69ced485fc725cdc2"
+        ],
+        "crs": {
+          "name": "EPSG3857",
+          "custom": false
+        },
+        "default_style": "IPY_MODEL_56a09cf9f6f14cfe88a29972cd3ccc80",
+        "dragging_style": "IPY_MODEL_6d6cd1fa08214dac9d28666e3ffae48b",
+        "layers": [
+          "IPY_MODEL_4b4fa59ec71d4f24995a4067f08cf60e",
+          "IPY_MODEL_d83bb61d4829409480f5fe2ebe692ada",
+          "IPY_MODEL_070a3c42bbf74963959ca5b36b3df020"
+        ],
+        "layout": "IPY_MODEL_8b14d586160c4f789345ffa679877a3b",
+        "max_zoom": 24.0,
+        "options": [
+          "bounce_at_zoom_limits",
+          "box_zoom",
+          "center",
+          "close_popup_on_click",
+          "double_click_zoom",
+          "dragging",
+          "fullscreen",
+          "inertia",
+          "inertia_deceleration",
+          "inertia_max_speed",
+          "interpolation",
+          "keyboard",
+          "keyboard_pan_offset",
+          "keyboard_zoom_offset",
+          "max_zoom",
+          "min_zoom",
+          "prefer_canvas",
+          "scroll_wheel_zoom",
+          "tap",
+          "tap_tolerance",
+          "touch_zoom",
+          "world_copy_jump",
+          "zoom",
+          "zoom_animation_threshold",
+          "zoom_delta",
+          "zoom_snap"
+        ],
+        "panes": {},
+        "scroll_wheel_zoom": true,
+        "style": "IPY_MODEL_7a1b8c0b275c4c4bbb6096a6331a60e0",
+        "zoom": 9.0
+      }
+    },
+    "640ba8f703a24a16935b88f9e9bd64ab": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {
+        "grid_gap": "0px 10px",
+        "grid_template_columns": "auto auto",
+        "overflow": "visible"
+      }
+    },
+    "75ee9e7b18f04980af3039a27f7db8aa": {
+      "model_name": "GridBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_f4fd0247b97a4259a0bcf0f863c68648",
+          "IPY_MODEL_a2c0f51cd825493b9c0d45d9546a735e"
+        ],
+        "layout": "IPY_MODEL_640ba8f703a24a16935b88f9e9bd64ab"
+      }
+    },
+    "3a06681fbc224210aae41bf79e362c67": {
+      "model_name": "LeafletWidgetControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "position",
+          "transparent_bg"
+        ],
+        "position": "topright",
+        "transparent_bg": true,
+        "widget": "IPY_MODEL_75ee9e7b18f04980af3039a27f7db8aa"
+      }
+    },
+    "c690f28a0aa5474597b831b4489494d8": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "d3fc1e2f932f4897be11f368432b2d06": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "layout": "IPY_MODEL_c690f28a0aa5474597b831b4489494d8"
+      }
+    },
+    "8cdfd2eb9011446fbe4023a721afea1b": {
+      "model_name": "LeafletWidgetControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "position",
+          "transparent_bg"
+        ],
+        "transparent_bg": true,
+        "widget": "IPY_MODEL_d3fc1e2f932f4897be11f368432b2d06"
+      }
+    },
+    "261e3b55d01541758f2f6e736acbda92": {
+      "model_name": "LeafletZoomControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "position",
+          "zoom_in_text",
+          "zoom_in_title",
+          "zoom_out_text",
+          "zoom_out_title"
+        ]
+      }
+    },
+    "b6313128325947d8a28a7c96c431af6c": {
+      "model_name": "LeafletFullScreenControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "position"
+        ]
+      }
+    },
+    "a67dbc05a2814547971ff95f4e92f12b": {
+      "model_name": "LeafletDrawControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "circle": {},
+        "circlemarker": {},
+        "data": [],
+        "marker": {
+          "shapeOptions": {
+            "color": "#3388ff"
+          }
+        },
+        "options": [
+          "position"
+        ],
+        "polygon": {
+          "shapeOptions": {}
+        },
+        "polyline": {
+          "shapeOptions": {}
+        },
+        "rectangle": {
+          "shapeOptions": {
+            "color": "#3388ff"
+          }
+        }
+      }
+    },
+    "772dfd854d7d40bd9b326e9b44a720ca": {
+      "model_name": "LeafletScaleControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "imperial",
+          "max_width",
+          "metric",
+          "position",
+          "update_when_idle"
+        ],
+        "position": "bottomleft"
+      }
+    },
+    "1a888e7409b34c1690718228ddecb8f2": {
+      "model_name": "LeafletMeasureControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "_custom_units": {},
+        "active_color": "orange",
+        "options": [
+          "active_color",
+          "capture_z_index",
+          "completed_color",
+          "popup_options",
+          "position",
+          "primary_area_unit",
+          "primary_length_unit",
+          "secondary_area_unit",
+          "secondary_length_unit"
+        ],
+        "popup_options": {
+          "className": "leaflet-measure-resultpopup",
+          "autoPanPadding": [
+            10,
+            10
+          ]
+        },
+        "position": "bottomleft",
+        "primary_length_unit": "kilometers"
+      }
+    },
+    "f0c55c532bb8459bbf4a6d47d9e0ea95": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "f4fd0247b97a4259a0bcf0f863c68648": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_0c3edefdf29b4ab6aa21381a425aeb77",
+          "IPY_MODEL_fdeb4f268c304f58a2a1cf2b68a16293",
+          "IPY_MODEL_48ced45f514c4e098e06e7165ca41630"
+        ],
+        "layout": "IPY_MODEL_f0c55c532bb8459bbf4a6d47d9e0ea95"
+      }
+    },
+    "8eb62346aa17422e9c26e2a1e1ec2035": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "3412068c70174c9cbf6e733ce0191732": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "layout": "IPY_MODEL_8eb62346aa17422e9c26e2a1e1ec2035",
+        "name": "OpenStreetMap.Mapnik"
+      }
+    },
+    "51c451eee09c4150bf204f0024b32ca1": {
+      "model_name": "LinkModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {
+        "source": [
+          "IPY_MODEL_4b4fa59ec71d4f24995a4067f08cf60e",
+          "opacity"
+        ],
+        "target": [
+          "IPY_MODEL_3412068c70174c9cbf6e733ce0191732",
+          "opacity"
+        ]
+      }
+    },
+    "11e1859c5dc141e09b871fa01067ec43": {
+      "model_name": "LinkModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {
+        "source": [
+          "IPY_MODEL_4b4fa59ec71d4f24995a4067f08cf60e",
+          "visible"
+        ],
+        "target": [
+          "IPY_MODEL_3412068c70174c9cbf6e733ce0191732",
+          "visible"
+        ]
+      }
+    },
+    "8648d3ccc4474d958dd4586b1570efe5": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "a2c0f51cd825493b9c0d45d9546a735e": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [],
+        "extra_tools": [
+          "IPY_MODEL_6aa8465176fc4f83a34801f086933853",
+          "IPY_MODEL_8f28ae06a93a42278a1b9e20be9bc4b5",
+          "IPY_MODEL_e175fe6e07a64b37a654b9d232392beb",
+          "IPY_MODEL_f01cacd920064476a5cbf4189921657b",
+          "IPY_MODEL_f51f59750b9e43d4a2d441500e569f07",
+          "IPY_MODEL_375fb79d86c645dd83dfe72d11ea2a36",
+          "IPY_MODEL_6a9d2a2e3fc34de3ad9839d06dba7c38",
+          "IPY_MODEL_d82c8f3289dd48fe824d44a27ed4f01e",
+          "IPY_MODEL_67a1b2e4c21c4e9eb8ba226f729c9824",
+          "IPY_MODEL_fb09e88ebb664ce589db1dd560ec4513",
+          "IPY_MODEL_a5c07e16f66a4586a28f743f426aa58f"
+        ],
+        "layout": "IPY_MODEL_8648d3ccc4474d958dd4586b1570efe5",
+        "main_tools": [
+          "IPY_MODEL_104c6676b5e045efaf325386972691c2",
+          "IPY_MODEL_bbdc2dd8eba045929d4a9767e7e45b25",
+          "IPY_MODEL_5208ecaac0a2411c8b0cf31f1aad3269",
+          "IPY_MODEL_1ab43bf663ee4490aa655c1393003f7e",
+          "IPY_MODEL_0d308c2b5c7747d3bb247bf83e8fe82a",
+          "IPY_MODEL_fb12e00ff4214c9ab5094e920125eb93"
+        ]
+      }
+    },
+    "712d874078fc4be890679af380234846": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "fb12e00ff4214c9ab5094e920125eb93": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "icon": "add",
+        "layout": "IPY_MODEL_712d874078fc4be890679af380234846",
+        "tooltip_text": "Expand toolbar"
+      }
+    },
+    "92dfcdddae9d48758c32ec6404bebd26": {
+      "model_name": "LeafletAttributionControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "position",
+          "prefix"
+        ],
+        "position": "bottomright"
+      }
+    },
+    "d83bb61d4829409480f5fe2ebe692ada": {
+      "model_name": "LeafletTileLayerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "attribution": "Tiles (C) Esri -- Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+        "max_zoom": 30,
+        "name": "Esri.WorldImagery",
+        "options": [
+          "attribution",
+          "bounds",
+          "detect_retina",
+          "max_native_zoom",
+          "max_zoom",
+          "min_native_zoom",
+          "min_zoom",
+          "no_wrap",
+          "pm_ignore",
+          "tile_size",
+          "tms",
+          "zoom_offset"
+        ],
+        "subitems": [],
+        "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+      }
+    },
+    "fc2809516b4c40dc8586ead977d82f59": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "f1b42c9855b24aa19b962e8eb67874e1": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "layout": "IPY_MODEL_fc2809516b4c40dc8586ead977d82f59",
+        "name": "OpenStreetMap.Mapnik"
+      }
+    },
+    "0f874982e9df4a379eaed3f5b8e68a0f": {
+      "model_name": "LinkModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {
+        "source": [
+          "IPY_MODEL_4b4fa59ec71d4f24995a4067f08cf60e",
+          "opacity"
+        ],
+        "target": [
+          "IPY_MODEL_f1b42c9855b24aa19b962e8eb67874e1",
+          "opacity"
+        ]
+      }
+    },
+    "e222f8a7999e46bf981ec51a84836eaa": {
+      "model_name": "LinkModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {
+        "source": [
+          "IPY_MODEL_4b4fa59ec71d4f24995a4067f08cf60e",
+          "visible"
+        ],
+        "target": [
+          "IPY_MODEL_f1b42c9855b24aa19b962e8eb67874e1",
+          "visible"
+        ]
+      }
+    },
+    "dbeca14427bd414d94e6a03fbdb3183b": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "2f01f8dc248b4776945e6002b7587cc7": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "layout": "IPY_MODEL_dbeca14427bd414d94e6a03fbdb3183b",
+        "name": "Esri.WorldImagery"
+      }
+    },
+    "b3739ceabbd3443383bac0ff30e62946": {
+      "model_name": "LinkModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {
+        "source": [
+          "IPY_MODEL_d83bb61d4829409480f5fe2ebe692ada",
+          "opacity"
+        ],
+        "target": [
+          "IPY_MODEL_2f01f8dc248b4776945e6002b7587cc7",
+          "opacity"
+        ]
+      }
+    },
+    "8b776b2dc7a44b849f7c5e67caaeeb6c": {
+      "model_name": "LinkModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {
+        "source": [
+          "IPY_MODEL_d83bb61d4829409480f5fe2ebe692ada",
+          "visible"
+        ],
+        "target": [
+          "IPY_MODEL_2f01f8dc248b4776945e6002b7587cc7",
+          "visible"
+        ]
+      }
+    },
+    "0513427bc57d4338830f4d3b5a41cd7d": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {
+        "height": "28px",
+        "padding": "0px 0px 0px 4px",
+        "width": "28px"
+      }
+    },
+    "c13476ac4b8a4273bbd18e90d305de78": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {}
+    },
+    "574c604431ae40928db5b61ee9b8cd12": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "info",
+        "layout": "IPY_MODEL_0513427bc57d4338830f4d3b5a41cd7d",
+        "style": "IPY_MODEL_c13476ac4b8a4273bbd18e90d305de78",
+        "tooltip": "Toolbar",
+        "value": true
+      }
+    },
+    "6ae38125f394411ab81bc3e69dc7ab3d": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {
+        "height": "28px",
+        "padding": "0px 0px 0px 4px",
+        "width": "28px"
+      }
+    },
+    "b8310720ce3f4cadaa95d2a54201a15a": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {}
+    },
+    "ecc9e1f734784e36a13910a5c1e6205b": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "times",
+        "layout": "IPY_MODEL_6ae38125f394411ab81bc3e69dc7ab3d",
+        "style": "IPY_MODEL_b8310720ce3f4cadaa95d2a54201a15a",
+        "tooltip": "Close the tool"
+      }
+    },
+    "e5cc0d9f4f8e41a6a95230c4d8f761db": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {
+        "margin": "0px 10px 0px 10px",
+        "max_height": "250px",
+        "max_width": "250px"
+      }
+    },
+    "c7cffd61b01741e18c733abc56ae3c4c": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {}
+    },
+    "73aa2fe64cb247709731985da497761a": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_e5cc0d9f4f8e41a6a95230c4d8f761db",
+        "style": "IPY_MODEL_c7cffd61b01741e18c733abc56ae3c4c"
+      }
+    },
+    "35ea113af25c4dbba4ed05256a5aa1c8": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "d51bb30a7f2a4615a447683ae2c410c8": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_574c604431ae40928db5b61ee9b8cd12",
+          "IPY_MODEL_ecc9e1f734784e36a13910a5c1e6205b"
+        ],
+        "layout": "IPY_MODEL_35ea113af25c4dbba4ed05256a5aa1c8"
+      }
+    },
+    "8488699badf440079ad963f1747933e8": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "5e4801720151457291f0fd5f0ed4b20f": {
+      "model_name": "VBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_d51bb30a7f2a4615a447683ae2c410c8",
+          "IPY_MODEL_73aa2fe64cb247709731985da497761a"
+        ],
+        "layout": "IPY_MODEL_8488699badf440079ad963f1747933e8"
+      }
+    },
+    "cd354902cfef4d0689ce5252f470fd0d": {
+      "model_name": "LeafletWidgetControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "position",
+          "transparent_bg"
+        ],
+        "position": "bottomright",
+        "widget": "IPY_MODEL_5e4801720151457291f0fd5f0ed4b20f"
+      }
+    },
+    "070a3c42bbf74963959ca5b36b3df020": {
+      "model_name": "LeafletGeoJSONModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "data": {
+          "type": "FeatureCollection",
+          "features": [
+            {
+              "id": "0",
+              "type": "Feature",
+              "properties": {
+                "Name": "delhi_airshed",
+                "style": {
+                  "color": "black",
+                  "fillColor": "black"
+                }
+              },
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      76.85,
+                      28.27
+                    ],
+                    [
+                      76.85,
+                      28.28
+                    ],
+                    [
+                      76.85,
+                      28.29
+                    ],
+                    [
+                      76.85,
+                      28.3
+                    ],
+                    [
+                      76.85,
+                      28.31
+                    ],
+                    [
+                      76.85,
+                      28.32
+                    ],
+                    [
+                      76.85,
+                      28.33
+                    ],
+                    [
+                      76.85,
+                      28.34
+                    ],
+                    [
+                      76.85,
+                      28.35
+                    ],
+                    [
+                      76.85,
+                      28.36
+                    ],
+                    [
+                      76.85,
+                      28.37
+                    ],
+                    [
+                      76.85,
+                      28.38
+                    ],
+                    [
+                      76.85,
+                      28.39
+                    ],
+                    [
+                      76.85,
+                      28.4
+                    ],
+                    [
+                      76.85,
+                      28.41
+                    ],
+                    [
+                      76.85,
+                      28.42
+                    ],
+                    [
+                      76.85,
+                      28.43
+                    ],
+                    [
+                      76.85,
+                      28.44
+                    ],
+                    [
+                      76.85,
+                      28.45
+                    ],
+                    [
+                      76.85,
+                      28.46
+                    ],
+                    [
+                      76.85,
+                      28.47
+                    ],
+                    [
+                      76.85,
+                      28.48
+                    ],
+                    [
+                      76.85,
+                      28.49
+                    ],
+                    [
+                      76.85,
+                      28.5
+                    ],
+                    [
+                      76.85,
+                      28.51
+                    ],
+                    [
+                      76.85,
+                      28.52
+                    ],
+                    [
+                      76.85,
+                      28.53
+                    ],
+                    [
+                      76.85,
+                      28.54
+                    ],
+                    [
+                      76.85,
+                      28.55
+                    ],
+                    [
+                      76.85,
+                      28.56
+                    ],
+                    [
+                      76.85,
+                      28.57
+                    ],
+                    [
+                      76.85,
+                      28.58
+                    ],
+                    [
+                      76.85,
+                      28.59
+                    ],
+                    [
+                      76.85,
+                      28.6
+                    ],
+                    [
+                      76.85,
+                      28.61
+                    ],
+                    [
+                      76.85,
+                      28.62
+                    ],
+                    [
+                      76.85,
+                      28.63
+                    ],
+                    [
+                      76.85,
+                      28.64
+                    ],
+                    [
+                      76.85,
+                      28.65
+                    ],
+                    [
+                      76.85,
+                      28.66
+                    ],
+                    [
+                      76.85,
+                      28.67
+                    ],
+                    [
+                      76.85,
+                      28.68
+                    ],
+                    [
+                      76.85,
+                      28.69
+                    ],
+                    [
+                      76.85,
+                      28.7
+                    ],
+                    [
+                      76.85,
+                      28.71
+                    ],
+                    [
+                      76.85,
+                      28.72
+                    ],
+                    [
+                      76.85,
+                      28.73
+                    ],
+                    [
+                      76.85,
+                      28.74
+                    ],
+                    [
+                      76.85,
+                      28.75
+                    ],
+                    [
+                      76.85,
+                      28.76
+                    ],
+                    [
+                      76.85,
+                      28.77
+                    ],
+                    [
+                      76.85,
+                      28.78
+                    ],
+                    [
+                      76.85,
+                      28.79
+                    ],
+                    [
+                      76.85,
+                      28.8
+                    ],
+                    [
+                      76.85,
+                      28.81
+                    ],
+                    [
+                      76.85,
+                      28.82
+                    ],
+                    [
+                      76.85,
+                      28.83
+                    ],
+                    [
+                      76.85,
+                      28.84
+                    ],
+                    [
+                      76.85,
+                      28.85
+                    ],
+                    [
+                      76.85,
+                      28.86
+                    ],
+                    [
+                      76.85,
+                      28.87
+                    ],
+                    [
+                      76.85,
+                      28.88
+                    ],
+                    [
+                      76.85,
+                      28.89
+                    ],
+                    [
+                      76.85,
+                      28.9
+                    ],
+                    [
+                      76.85,
+                      28.91
+                    ],
+                    [
+                      76.85,
+                      28.92
+                    ],
+                    [
+                      76.85,
+                      28.93
+                    ],
+                    [
+                      76.85,
+                      28.94
+                    ],
+                    [
+                      76.85,
+                      28.95
+                    ],
+                    [
+                      76.85,
+                      28.96
+                    ],
+                    [
+                      76.85,
+                      28.97
+                    ],
+                    [
+                      76.85,
+                      28.98
+                    ],
+                    [
+                      76.85,
+                      28.99
+                    ],
+                    [
+                      76.85,
+                      29.0
+                    ],
+                    [
+                      76.86,
+                      29.0
+                    ],
+                    [
+                      76.87,
+                      29.0
+                    ],
+                    [
+                      76.88,
+                      29.0
+                    ],
+                    [
+                      76.89,
+                      29.0
+                    ],
+                    [
+                      76.9,
+                      29.0
+                    ],
+                    [
+                      76.91,
+                      29.0
+                    ],
+                    [
+                      76.92,
+                      29.0
+                    ],
+                    [
+                      76.93,
+                      29.0
+                    ],
+                    [
+                      76.94,
+                      29.0
+                    ],
+                    [
+                      76.95,
+                      29.0
+                    ],
+                    [
+                      76.96,
+                      29.0
+                    ],
+                    [
+                      76.97,
+                      29.0
+                    ],
+                    [
+                      76.98,
+                      29.0
+                    ],
+                    [
+                      76.99,
+                      29.0
+                    ],
+                    [
+                      77.0,
+                      29.0
+                    ],
+                    [
+                      77.01,
+                      29.0
+                    ],
+                    [
+                      77.02,
+                      29.0
+                    ],
+                    [
+                      77.03,
+                      29.0
+                    ],
+                    [
+                      77.04,
+                      29.0
+                    ],
+                    [
+                      77.05,
+                      29.0
+                    ],
+                    [
+                      77.06,
+                      29.0
+                    ],
+                    [
+                      77.07,
+                      29.0
+                    ],
+                    [
+                      77.08,
+                      29.0
+                    ],
+                    [
+                      77.09,
+                      29.0
+                    ],
+                    [
+                      77.1,
+                      29.0
+                    ],
+                    [
+                      77.11,
+                      29.0
+                    ],
+                    [
+                      77.12,
+                      29.0
+                    ],
+                    [
+                      77.13,
+                      29.0
+                    ],
+                    [
+                      77.14,
+                      29.0
+                    ],
+                    [
+                      77.15,
+                      29.0
+                    ],
+                    [
+                      77.16,
+                      29.0
+                    ],
+                    [
+                      77.17,
+                      29.0
+                    ],
+                    [
+                      77.18,
+                      29.0
+                    ],
+                    [
+                      77.19,
+                      29.0
+                    ],
+                    [
+                      77.2,
+                      29.0
+                    ],
+                    [
+                      77.21,
+                      29.0
+                    ],
+                    [
+                      77.22,
+                      29.0
+                    ],
+                    [
+                      77.23,
+                      29.0
+                    ],
+                    [
+                      77.24,
+                      29.0
+                    ],
+                    [
+                      77.25,
+                      29.0
+                    ],
+                    [
+                      77.26,
+                      29.0
+                    ],
+                    [
+                      77.27,
+                      29.0
+                    ],
+                    [
+                      77.28,
+                      29.0
+                    ],
+                    [
+                      77.29,
+                      29.0
+                    ],
+                    [
+                      77.3,
+                      29.0
+                    ],
+                    [
+                      77.31,
+                      29.0
+                    ],
+                    [
+                      77.32,
+                      29.0
+                    ],
+                    [
+                      77.33,
+                      29.0
+                    ],
+                    [
+                      77.34,
+                      29.0
+                    ],
+                    [
+                      77.35,
+                      29.0
+                    ],
+                    [
+                      77.36,
+                      29.0
+                    ],
+                    [
+                      77.37,
+                      29.0
+                    ],
+                    [
+                      77.38,
+                      29.0
+                    ],
+                    [
+                      77.39,
+                      29.0
+                    ],
+                    [
+                      77.4,
+                      29.0
+                    ],
+                    [
+                      77.41,
+                      29.0
+                    ],
+                    [
+                      77.42,
+                      29.0
+                    ],
+                    [
+                      77.43,
+                      29.0
+                    ],
+                    [
+                      77.44,
+                      29.0
+                    ],
+                    [
+                      77.45,
+                      29.0
+                    ],
+                    [
+                      77.46,
+                      29.0
+                    ],
+                    [
+                      77.47,
+                      29.0
+                    ],
+                    [
+                      77.48,
+                      29.0
+                    ],
+                    [
+                      77.49,
+                      29.0
+                    ],
+                    [
+                      77.5,
+                      29.0
+                    ],
+                    [
+                      77.51,
+                      29.0
+                    ],
+                    [
+                      77.52,
+                      29.0
+                    ],
+                    [
+                      77.53,
+                      29.0
+                    ],
+                    [
+                      77.54,
+                      29.0
+                    ],
+                    [
+                      77.55,
+                      29.0
+                    ],
+                    [
+                      77.56,
+                      29.0
+                    ],
+                    [
+                      77.57,
+                      29.0
+                    ],
+                    [
+                      77.58,
+                      29.0
+                    ],
+                    [
+                      77.59,
+                      29.0
+                    ],
+                    [
+                      77.6,
+                      29.0
+                    ],
+                    [
+                      77.61,
+                      29.0
+                    ],
+                    [
+                      77.62,
+                      29.0
+                    ],
+                    [
+                      77.63,
+                      29.0
+                    ],
+                    [
+                      77.64,
+                      29.0
+                    ],
+                    [
+                      77.65,
+                      29.0
+                    ],
+                    [
+                      77.65,
+                      28.99
+                    ],
+                    [
+                      77.65,
+                      28.98
+                    ],
+                    [
+                      77.65,
+                      28.97
+                    ],
+                    [
+                      77.65,
+                      28.96
+                    ],
+                    [
+                      77.65,
+                      28.95
+                    ],
+                    [
+                      77.65,
+                      28.94
+                    ],
+                    [
+                      77.65,
+                      28.93
+                    ],
+                    [
+                      77.65,
+                      28.92
+                    ],
+                    [
+                      77.65,
+                      28.91
+                    ],
+                    [
+                      77.65,
+                      28.9
+                    ],
+                    [
+                      77.65,
+                      28.89
+                    ],
+                    [
+                      77.65,
+                      28.88
+                    ],
+                    [
+                      77.65,
+                      28.87
+                    ],
+                    [
+                      77.65,
+                      28.86
+                    ],
+                    [
+                      77.65,
+                      28.85
+                    ],
+                    [
+                      77.65,
+                      28.84
+                    ],
+                    [
+                      77.65,
+                      28.83
+                    ],
+                    [
+                      77.65,
+                      28.82
+                    ],
+                    [
+                      77.65,
+                      28.81
+                    ],
+                    [
+                      77.65,
+                      28.8
+                    ],
+                    [
+                      77.65,
+                      28.79
+                    ],
+                    [
+                      77.65,
+                      28.78
+                    ],
+                    [
+                      77.65,
+                      28.77
+                    ],
+                    [
+                      77.65,
+                      28.76
+                    ],
+                    [
+                      77.65,
+                      28.75
+                    ],
+                    [
+                      77.65,
+                      28.74
+                    ],
+                    [
+                      77.65,
+                      28.73
+                    ],
+                    [
+                      77.65,
+                      28.72
+                    ],
+                    [
+                      77.65,
+                      28.71
+                    ],
+                    [
+                      77.65,
+                      28.7
+                    ],
+                    [
+                      77.65,
+                      28.69
+                    ],
+                    [
+                      77.65,
+                      28.68
+                    ],
+                    [
+                      77.65,
+                      28.67
+                    ],
+                    [
+                      77.65,
+                      28.66
+                    ],
+                    [
+                      77.65,
+                      28.65
+                    ],
+                    [
+                      77.65,
+                      28.64
+                    ],
+                    [
+                      77.65,
+                      28.63
+                    ],
+                    [
+                      77.65,
+                      28.62
+                    ],
+                    [
+                      77.65,
+                      28.61
+                    ],
+                    [
+                      77.65,
+                      28.6
+                    ],
+                    [
+                      77.65,
+                      28.59
+                    ],
+                    [
+                      77.65,
+                      28.58
+                    ],
+                    [
+                      77.65,
+                      28.57
+                    ],
+                    [
+                      77.65,
+                      28.56
+                    ],
+                    [
+                      77.65,
+                      28.55
+                    ],
+                    [
+                      77.65,
+                      28.54
+                    ],
+                    [
+                      77.65,
+                      28.53
+                    ],
+                    [
+                      77.65,
+                      28.52
+                    ],
+                    [
+                      77.65,
+                      28.51
+                    ],
+                    [
+                      77.65,
+                      28.5
+                    ],
+                    [
+                      77.65,
+                      28.49
+                    ],
+                    [
+                      77.65,
+                      28.48
+                    ],
+                    [
+                      77.65,
+                      28.47
+                    ],
+                    [
+                      77.65,
+                      28.46
+                    ],
+                    [
+                      77.65,
+                      28.45
+                    ],
+                    [
+                      77.65,
+                      28.44
+                    ],
+                    [
+                      77.65,
+                      28.43
+                    ],
+                    [
+                      77.65,
+                      28.42
+                    ],
+                    [
+                      77.65,
+                      28.41
+                    ],
+                    [
+                      77.65,
+                      28.4
+                    ],
+                    [
+                      77.65,
+                      28.39
+                    ],
+                    [
+                      77.65,
+                      28.38
+                    ],
+                    [
+                      77.65,
+                      28.37
+                    ],
+                    [
+                      77.65,
+                      28.36
+                    ],
+                    [
+                      77.65,
+                      28.35
+                    ],
+                    [
+                      77.65,
+                      28.34
+                    ],
+                    [
+                      77.65,
+                      28.33
+                    ],
+                    [
+                      77.65,
+                      28.32
+                    ],
+                    [
+                      77.65,
+                      28.31
+                    ],
+                    [
+                      77.65,
+                      28.3
+                    ],
+                    [
+                      77.65,
+                      28.29
+                    ],
+                    [
+                      77.65,
+                      28.28
+                    ],
+                    [
+                      77.65,
+                      28.27
+                    ],
+                    [
+                      77.65,
+                      28.26
+                    ],
+                    [
+                      77.65,
+                      28.25
+                    ],
+                    [
+                      77.65,
+                      28.24
+                    ],
+                    [
+                      77.65,
+                      28.23
+                    ],
+                    [
+                      77.65,
+                      28.22
+                    ],
+                    [
+                      77.65,
+                      28.21
+                    ],
+                    [
+                      77.65,
+                      28.2
+                    ],
+                    [
+                      77.64,
+                      28.2
+                    ],
+                    [
+                      77.63,
+                      28.2
+                    ],
+                    [
+                      77.62,
+                      28.2
+                    ],
+                    [
+                      77.61,
+                      28.2
+                    ],
+                    [
+                      77.6,
+                      28.2
+                    ],
+                    [
+                      77.59,
+                      28.2
+                    ],
+                    [
+                      77.58,
+                      28.2
+                    ],
+                    [
+                      77.57,
+                      28.2
+                    ],
+                    [
+                      77.56,
+                      28.2
+                    ],
+                    [
+                      77.55,
+                      28.2
+                    ],
+                    [
+                      77.54,
+                      28.2
+                    ],
+                    [
+                      77.53,
+                      28.2
+                    ],
+                    [
+                      77.52,
+                      28.2
+                    ],
+                    [
+                      77.51,
+                      28.2
+                    ],
+                    [
+                      77.5,
+                      28.2
+                    ],
+                    [
+                      77.49,
+                      28.2
+                    ],
+                    [
+                      77.48,
+                      28.2
+                    ],
+                    [
+                      77.47,
+                      28.2
+                    ],
+                    [
+                      77.46,
+                      28.2
+                    ],
+                    [
+                      77.45,
+                      28.2
+                    ],
+                    [
+                      77.44,
+                      28.2
+                    ],
+                    [
+                      77.43,
+                      28.2
+                    ],
+                    [
+                      77.42,
+                      28.2
+                    ],
+                    [
+                      77.41,
+                      28.2
+                    ],
+                    [
+                      77.4,
+                      28.2
+                    ],
+                    [
+                      77.39,
+                      28.2
+                    ],
+                    [
+                      77.38,
+                      28.2
+                    ],
+                    [
+                      77.37,
+                      28.2
+                    ],
+                    [
+                      77.36,
+                      28.2
+                    ],
+                    [
+                      77.35,
+                      28.2
+                    ],
+                    [
+                      77.34,
+                      28.2
+                    ],
+                    [
+                      77.33,
+                      28.2
+                    ],
+                    [
+                      77.32,
+                      28.2
+                    ],
+                    [
+                      77.31,
+                      28.2
+                    ],
+                    [
+                      77.3,
+                      28.2
+                    ],
+                    [
+                      77.29,
+                      28.2
+                    ],
+                    [
+                      77.28,
+                      28.2
+                    ],
+                    [
+                      77.27,
+                      28.2
+                    ],
+                    [
+                      77.26,
+                      28.2
+                    ],
+                    [
+                      77.25,
+                      28.2
+                    ],
+                    [
+                      77.24,
+                      28.2
+                    ],
+                    [
+                      77.23,
+                      28.2
+                    ],
+                    [
+                      77.22,
+                      28.2
+                    ],
+                    [
+                      77.21,
+                      28.2
+                    ],
+                    [
+                      77.2,
+                      28.2
+                    ],
+                    [
+                      77.19,
+                      28.2
+                    ],
+                    [
+                      77.18,
+                      28.2
+                    ],
+                    [
+                      77.17,
+                      28.2
+                    ],
+                    [
+                      77.16,
+                      28.2
+                    ],
+                    [
+                      77.15,
+                      28.2
+                    ],
+                    [
+                      77.14,
+                      28.2
+                    ],
+                    [
+                      77.13,
+                      28.2
+                    ],
+                    [
+                      77.12,
+                      28.2
+                    ],
+                    [
+                      77.11,
+                      28.2
+                    ],
+                    [
+                      77.1,
+                      28.2
+                    ],
+                    [
+                      77.09,
+                      28.2
+                    ],
+                    [
+                      77.08,
+                      28.2
+                    ],
+                    [
+                      77.07,
+                      28.2
+                    ],
+                    [
+                      77.06,
+                      28.2
+                    ],
+                    [
+                      77.05,
+                      28.2
+                    ],
+                    [
+                      77.04,
+                      28.2
+                    ],
+                    [
+                      77.03,
+                      28.2
+                    ],
+                    [
+                      77.02,
+                      28.2
+                    ],
+                    [
+                      77.01,
+                      28.2
+                    ],
+                    [
+                      77.0,
+                      28.2
+                    ],
+                    [
+                      76.99,
+                      28.2
+                    ],
+                    [
+                      76.98,
+                      28.2
+                    ],
+                    [
+                      76.97,
+                      28.2
+                    ],
+                    [
+                      76.96,
+                      28.2
+                    ],
+                    [
+                      76.95,
+                      28.2
+                    ],
+                    [
+                      76.94,
+                      28.2
+                    ],
+                    [
+                      76.93,
+                      28.2
+                    ],
+                    [
+                      76.92,
+                      28.2
+                    ],
+                    [
+                      76.91,
+                      28.2
+                    ],
+                    [
+                      76.9,
+                      28.2
+                    ],
+                    [
+                      76.89,
+                      28.2
+                    ],
+                    [
+                      76.88,
+                      28.2
+                    ],
+                    [
+                      76.87,
+                      28.2
+                    ],
+                    [
+                      76.86,
+                      28.2
+                    ],
+                    [
+                      76.85,
+                      28.2
+                    ],
+                    [
+                      76.85,
+                      28.21
+                    ],
+                    [
+                      76.85,
+                      28.22
+                    ],
+                    [
+                      76.85,
+                      28.23
+                    ],
+                    [
+                      76.85,
+                      28.24
+                    ],
+                    [
+                      76.85,
+                      28.25
+                    ],
+                    [
+                      76.85,
+                      28.26
+                    ],
+                    [
+                      76.85,
+                      28.27
+                    ]
+                  ]
+                ]
+              },
+              "bbox": [
+                76.85,
+                28.2,
+                77.65,
+                29.0
+              ]
+            }
+          ],
+          "bbox": [
+            76.85,
+            28.2,
+            77.65,
+            29.0
+          ]
+        },
+        "hover_style": {
+          "weight": 2,
+          "fillOpacity": 0.5
+        },
+        "layers": [],
+        "name": "Delhi Airshed",
+        "options": [
+          "pm_ignore"
+        ],
+        "point_style": {},
+        "style": {
+          "color": "yellow",
+          "fillOpacity": 0,
+          "weight": 1
+        },
+        "subitems": []
+      }
+    },
+    "2f0e3664e97a4a648e2c0339991d89a7": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "0c3edefdf29b4ab6aa21381a425aeb77": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "layout": "IPY_MODEL_2f0e3664e97a4a648e2c0339991d89a7",
+        "name": "OpenStreetMap.Mapnik"
+      }
+    },
+    "4cf2d568278b477fa51a59e894fd482e": {
+      "model_name": "LinkModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {
+        "source": [
+          "IPY_MODEL_4b4fa59ec71d4f24995a4067f08cf60e",
+          "opacity"
+        ],
+        "target": [
+          "IPY_MODEL_0c3edefdf29b4ab6aa21381a425aeb77",
+          "opacity"
+        ]
+      }
+    },
+    "59d2f23a82364355aa0884b1ceb3a295": {
+      "model_name": "LinkModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {
+        "source": [
+          "IPY_MODEL_4b4fa59ec71d4f24995a4067f08cf60e",
+          "visible"
+        ],
+        "target": [
+          "IPY_MODEL_0c3edefdf29b4ab6aa21381a425aeb77",
+          "visible"
+        ]
+      }
+    },
+    "1efcc31aadb74fb4aa810214affc5af8": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "fdeb4f268c304f58a2a1cf2b68a16293": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "layout": "IPY_MODEL_1efcc31aadb74fb4aa810214affc5af8",
+        "name": "Esri.WorldImagery"
+      }
+    },
+    "43818cc5f6ee4427846f5d28a60451a0": {
+      "model_name": "LinkModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {
+        "source": [
+          "IPY_MODEL_d83bb61d4829409480f5fe2ebe692ada",
+          "opacity"
+        ],
+        "target": [
+          "IPY_MODEL_fdeb4f268c304f58a2a1cf2b68a16293",
+          "opacity"
+        ]
+      }
+    },
+    "09a0a8b90b004236a0ba45e6041c8d06": {
+      "model_name": "LinkModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {
+        "source": [
+          "IPY_MODEL_d83bb61d4829409480f5fe2ebe692ada",
+          "visible"
+        ],
+        "target": [
+          "IPY_MODEL_fdeb4f268c304f58a2a1cf2b68a16293",
+          "visible"
+        ]
+      }
+    },
+    "be4ce2c2d261486ab8d084cf27a70837": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "1.2.0",
+      "state": {}
+    },
+    "48ced45f514c4e098e06e7165ca41630": {
+      "model_name": "AnyModel",
+      "model_module": "anywidget",
+      "model_module_version": "~0.9.*",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "layout": "IPY_MODEL_be4ce2c2d261486ab8d084cf27a70837",
+        "name": "Delhi Airshed"
+      }
+    },
+    "78e162a522aa4f23b7b343d81a8f1f9f": {
+      "model_name": "LinkModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "1.5.0",
+      "state": {
+        "source": [
+          "IPY_MODEL_070a3c42bbf74963959ca5b36b3df020",
+          "visible"
+        ],
+        "target": [
+          "IPY_MODEL_48ced45f514c4e098e06e7165ca41630",
+          "visible"
+        ]
+      }
+    },
+    "90ef2ddae8e34be69ced485fc725cdc2": {
+      "model_name": "LeafletLayersControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.20",
+      "state": {
+        "options": [
+          "collapsed",
+          "position"
+        ],
+        "position": "topright"
+      }
+    }
+  }
+}
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "1af9701a68614d8cbcefd6b2db959ad6"}
+</script>
+
+</body>
+</html>
